@@ -14,13 +14,15 @@ body{
 }
 
 .event-name{
-  padding:70px 25px 200px 150px;
+  padding:50px 25px 200px 150px;
 }
 .event-title{
     font-size: 64px;
     font-weight: 700;
     color: #ffffff;
+    line-height:95%;
 }
+
 .button{
     background-color:mediumvioletred ;
     width: 160px;
@@ -35,8 +37,15 @@ body{
 .event-picture img{
     width: 556px;
     height: 438px;
-    padding:105px;
-    padding-left: 250px;
+    padding:50px 56px 200px 70px;
+
+    padding-left: 220px;
+}
+.event-picture:hover img{
+    width: 650px;
+    height: 450px;
+    transition: width 2s ease-in-out;
+    
 }
 /* ---/player-container starts---- */
 
@@ -124,4 +133,65 @@ hr{
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     align-items: center;
+}
+
+/* ---video section-- */
+.video-section{
+  text-align: center;}
+  .video-headline{
+      font-size: 45px;
+      color:lightslategrey;
+      font-weight: 700;
+  }
+.youtube-video{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 75px;
+}
+.video{
+    margin:15px;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width:668px) {
+    .event-container{
+        width: 100%;
+    }
+    .football-event{
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+    .event-title{
+        font-size: 44px;
+        font-weight: 500;
+        color: #ffffff;
+        line-height:100%;
+        width: 300px;
+        height: 300px;
+
+    }
+    .event-name{
+        
+        flex-direction: column;
+    }
+    .event-picture {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    padding-right: -50px;
+    width: 100%;
+    /* padding:10px 16px 10px 30px; */
+
+    /* padding-left: 20px; */
+    }
+ .event-picture img{
+    width: 256px;
+    height: 438px;
+ }
+ .player-box{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     flex-direction: column;
+ }
 }
